@@ -8,7 +8,7 @@ type ColumnProps = {
   children?: React.ReactNode;
 };
 
-export const Column: FC<ColumnProps> = ({ text, children }: ColumnProps) => {
+export const Column: FC<ColumnProps> = ({ text, children }) => {
   return (
     <ColumnContainer>
       <ColumnTitle>{text}</ColumnTitle>
