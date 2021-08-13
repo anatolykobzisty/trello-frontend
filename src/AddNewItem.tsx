@@ -12,12 +12,14 @@ export const AddNewItem = (props: AddNewItemProps) => {
   const [showForm, setShowForm] = useState(false);
   const { onAdd, toggleButtonText, dark } = props;
   if (showForm) {
-    <NewItemForm
-      onAdd={(text) => {
-        onAdd(text);
-        setShowForm(false);
-      }}
-    />;
+    return (
+      <NewItemForm
+        onAdd={(text) => {
+          onAdd(text);
+          setShowForm(false);
+        }}
+      />
+    );
   }
   return (
     <AddItemButton dark={dark} onClick={() => setShowForm(true)}>
