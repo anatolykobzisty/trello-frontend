@@ -102,3 +102,16 @@ export const CustomDragLayerContainer = styled.div`
   width: 100%;
   z-index: 100;
 `;
+
+type DragPreviewWrapperProps = {
+  position: {
+    x: number;
+    y: number;
+  };
+};
+
+export const DragPreviewWrapper = styled.div.attrs<DragPreviewWrapperProps>(({ position: { x, y } }) => ({
+  style: {
+    transform: `translate(${x}px, ${y}px)`,
+  },
+}))<DragPreviewWrapperProps>``;
