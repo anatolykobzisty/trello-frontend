@@ -1,3 +1,5 @@
+import { DragItem } from "../DragItem";
+
 export type Action =
   | {
       type: "ADD_LIST";
@@ -13,6 +15,10 @@ export type Action =
         draggedId: string;
         hoverId: string;
       };
+    }
+  | {
+      type: "SET_DRAGGED_ITEM";
+      payload: DragItem | null;
     };
 /*
 
